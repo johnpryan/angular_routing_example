@@ -1,0 +1,10 @@
+<p>home</p>
+
+<nav>
+    <a [routerLink]="RoutePaths.articles.toUrl()"
+       [routerLinkActive]="'active'">Articles</a>
+    <a [routerLink]="RoutePaths.users.toUrl()"
+       [routerLinkActive]="'active'">Users</a>
+</nav>
+
+<router-outlet [routes]="HomeComponent.routes"></router-outlet>

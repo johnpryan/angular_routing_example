@@ -39,6 +39,7 @@ class HomeComponent implements OnInit {
 }
 
 class RoutePaths {
-  static final articles = RoutePath(path: 'articles', parent: app.RoutePaths.home);
+  static final articles = RoutePath(
+      path: 'articles', parent: app.RoutePaths.home, useAsDefault: true);
   static final users = RoutePath(path: 'users', parent: app.RoutePaths.home);
 }

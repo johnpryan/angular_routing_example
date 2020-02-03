@@ -9,20 +9,21 @@ import 'package:angular_routing_example/src/components/settings_component.templa
     as settings;
 
 @Component(
-  selector: 'my-app',
-  styleUrls: ['app_component.css'],
-  templateUrl: 'app_component.html',
-  directives: [
-    HomeComponent,
-    SettingsComponent,
-    routerDirectives,
-  ],
-  exports: [RoutePaths]
-)
+    selector: 'my-app',
+    styleUrls: ['app_component.css'],
+    templateUrl: 'app_component.html',
+    directives: [
+      HomeComponent,
+      SettingsComponent,
+      routerDirectives,
+    ],
+    exports: [RoutePaths])
 class AppComponent {
   static final routes = [
     RouteDefinition(
-        routePath: RoutePaths.home, component: home.HomeComponentNgFactory),
+        routePath: RoutePaths.home,
+        component: home.HomeComponentNgFactory,
+        useAsDefault: true),
     RouteDefinition(
         routePath: RoutePaths.settings,
         component: settings.SettingsComponentNgFactory),
@@ -33,4 +34,3 @@ class RoutePaths {
   static final home = RoutePath(path: 'home');
   static final settings = RoutePath(path: 'settings');
 }
-
